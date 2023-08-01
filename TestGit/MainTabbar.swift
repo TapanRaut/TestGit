@@ -14,8 +14,8 @@ class MainTabbar: UITabBarController {
 
         
         viewControllers = [
-            createViewControllers(vc: HomeViewController(), backgroundColour: UIColor.white, title: "today", image: "today", preferdLargeTitle: true),
-            createViewControllers(vc: ProfileViewController(), backgroundColour: UIColor.red, title: "apps", image: "apps", preferdLargeTitle: true),
+            createViewControllers(vc: FeedViewController(), backgroundColour: UIColor.white, title: "today", image: "today", preferdLargeTitle: true),
+            createViewControllers(vc: ProfileViewController(), backgroundColour: UIColor.white, title: "apps", image: "apps", preferdLargeTitle: true),
             createViewControllers(vc: SearchViewController(), backgroundColour: UIColor.white, title: "search", image: "search", preferdLargeTitle: true)
            
            
@@ -29,7 +29,7 @@ class MainTabbar: UITabBarController {
         
         let nav = UINavigationController(rootViewController: vc)
         nav.view.backgroundColor = backgroundColour
-        nav.tabBarItem.image = UIImage(systemName: image)
+        nav.tabBarItem.image = UIImage(named: image)
         nav.tabBarItem.title = title
         nav.navigationBar.prefersLargeTitles = preferdLargeTitle
         return nav
